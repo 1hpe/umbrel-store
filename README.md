@@ -18,3 +18,6 @@ Settings kept only on the Umbrel (custom environment of Yuvomi Test, never in th
 `DB_ENCRYPTION_KEY` (the real Yuvomi's key, so the copied database opens),
 `SYNC_INTERVAL_MINUTES=30000` (keep it under 35791: larger values overflow Node's timer
 and make the sync loop), and a dead SMTP server so the test copy sends no email.
+
+Note: the test `version:` may carry a `-test.N` suffix (e.g. `2.89.1-test.1`) when only the
+store files changed (icon, texts); bump N to make Umbrel offer the change as an update.
