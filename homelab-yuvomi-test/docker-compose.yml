@@ -1,0 +1,26 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: homelab-yuvomi-test_web_1
+      APP_PORT: 3000
+
+  web:
+    # To test an update: change this tag to the new version shown for the real Yuvomi.
+    image: ghcr.io/ulsklyc/yuvomi:2.89.1@sha256:da12fa2236985424428d81f7f75b175a2863ab3537fd20e3c2aae547cf151352
+    restart: on-failure
+    stop_grace_period: 1m
+    volumes:
+      - ${APP_DATA_DIR}/data/app:/data
+      - ${APP_DATA_DIR}/data/backups:/backups
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - DB_PATH=/data/yuvomi.db
+      - BACKUP_DIR=/backups
+      - SESSION_SECRET=${APP_SEED}
+      # The copied database is encrypted with the REAL Yuvomi key. Override this
+      # in the Umbrel app settings (custom environment) — never commit the key here.
+      - DB_ENCRYPTION_KEY=${APP_SEED}
+      - SESSION_SECURE=false

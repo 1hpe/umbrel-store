@@ -1,0 +1,84 @@
+manifestVersion: 1
+id: homelab-yuvomi-test
+storage:
+  dataRoot: data
+category: files
+name: Yuvomi Test
+version: "2.89.1"
+tagline: TEST copy of Yuvomi — try updates here first
+description: >-
+  Yuvomi is a self-hosted, privacy-focused family planner that bundles everything
+  a household needs into a single fast PWA — no cloud, no tracking, no ads.
+
+
+  Everything runs on your Umbrel and stays on your Umbrel.
+
+
+  ✨ FEATURES
+
+
+  - Shared family calendar with recurring events, reminders and birthdays
+
+  - CalDAV / Google Calendar / Apple iCloud / ICS subscription sync
+
+  - Tasks with multi-assignment and due dates
+
+  - Shopping lists and a kitchen/meal planner
+
+  - Notes, contacts (CardDAV) and a household budget with recurring entries &
+    split expenses
+
+  - Housekeeping: staff, chores and supplies
+
+  - Weather widget (Open-Meteo, no API key needed)
+
+  - Optional single sign-on via OIDC
+
+  - Full-text search across every module
+
+  - Installable PWA, mobile-first, dark mode, multi-language
+
+
+  🔒 PRIVACY
+
+
+  Yuvomi keeps all data in a local SQLite database (optionally encrypted with
+  SQLCipher). Nothing leaves your device unless you explicitly enable a calendar
+  or contacts sync to a provider you choose.
+
+
+  🛠️ SET-UP
+
+
+  Open Yuvomi from your Umbrel dashboard and create the first account — that
+  account becomes the family admin and can invite the rest of the household.
+releaseNotes: >-
+  This update closes a gap for signed-in devices. A phone that is signed in to
+  Yuvomi with the app could change the email address stored for its own
+  household member, and that address is where a password reset is sent. A
+  signed-in device can no longer change it; everything else on the contact stays
+  editable from the device, and the address can still be changed in the browser.
+
+
+  If you use the app on a phone, nothing else changes there. If nobody in your
+  household does, this update changes nothing you would notice.
+
+
+  This update does not change the database. No action is needed from you.
+
+
+  Full release notes are available at
+  https://github.com/ulsklyc/yuvomi/releases/tag/v2.89.1
+backupIgnore:
+  - data/app/yuvomi.db.plaintext-backup*
+  - data/backups/*.db
+
+developer: Ulas Kalayci
+website: https://github.com/ulsklyc/yuvomi
+dependencies: []
+repo: https://github.com/ulsklyc/yuvomi
+support: https://github.com/ulsklyc/yuvomi/issues
+port: 8181
+path: ""
+defaultUsername: ""
+defaultPassword: ""
