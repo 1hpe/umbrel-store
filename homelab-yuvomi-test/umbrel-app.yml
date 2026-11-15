@@ -4,7 +4,7 @@ storage:
   dataRoot: data
 category: files
 name: Yuvomi Test
-version: "2.89.1"
+version: "2.89.1-test.1"
 tagline: TEST copy of Yuvomi — try updates here first
 description: >-
   Yuvomi is a self-hosted, privacy-focused family planner that bundles everything
@@ -79,6 +79,7 @@ dependencies: []
 repo: https://github.com/ulsklyc/yuvomi
 support: https://github.com/ulsklyc/yuvomi/issues
 port: 8181
+icon: https://raw.githubusercontent.com/1hpe/umbrel-store/main/homelab-yuvomi-test/icon.svg
 path: ""
 defaultUsername: ""
 defaultPassword: ""
