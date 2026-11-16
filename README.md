@@ -21,3 +21,11 @@ and make the sync loop), and a dead SMTP server so the test copy sends no email.
 
 Note: the test `version:` may carry a `-test.N` suffix (e.g. `2.89.1-test.1`) when only the
 store files changed (icon, texts); bump N to make Umbrel offer the change as an update.
+
+## Automatic updates
+
+A GitHub Actions workflow (`.github/workflows/sync-yuvomi.yml`) runs every hour,
+copies the official Yuvomi app with `scripts/sync-yuvomi.sh` and pushes when a new
+version is out. Umbrel then offers the update for **Yuvomi Test** on its own
+(within a few minutes); the real Yuvomi is never touched by this repo.
+Run it by hand from the repo's **Actions** tab → *Sync Yuvomi Test* → *Run workflow*.
