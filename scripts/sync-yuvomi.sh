@@ -20,8 +20,8 @@ sed -e "s/^id: yuvomi\$/id: $APP/" \
     -e 's/^name: Yuvomi$/name: Yuvomi Test/' \
     -e 's/^port: 8180$/port: 8181/' \
     -e 's/^tagline: .*/tagline: TEST copy of Yuvomi — try updates here first/' \
-    -e '/^gallery:/,/^path:/{/^gallery:/d;/^  - /d}' \
-    -e '/^submission:/d' -e '/^submitter:/d' \
+    -e '/^gallery:/,/^path:/{/^  - /d}' \
+    -e 's/^gallery:.*/gallery: []/' \
     -e "/^port: 8181\$/a icon: $ICON" \
     "$tmp/app.yml" > "$APP/umbrel-app.yml"
 

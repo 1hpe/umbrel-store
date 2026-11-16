@@ -94,6 +94,9 @@ repo: https://github.com/ulsklyc/yuvomi
 support: https://github.com/ulsklyc/yuvomi/issues
 port: 8181
 icon: https://raw.githubusercontent.com/1hpe/umbrel-store/main/homelab-yuvomi-test/icon.svg
+gallery: []
 path: ""
 defaultUsername: ""
 defaultPassword: ""
+submitter: Ulas Kalayci
+submission: https://github.com/getumbrel/umbrel-apps/pull/5732
