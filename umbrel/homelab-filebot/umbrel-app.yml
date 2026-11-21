@@ -1,0 +1,27 @@
+manifestVersion: 1
+id: homelab-filebot
+storage:
+  dataRoot: data
+category: files
+name: FileBot
+version: "1.0.0"
+tagline: Rinomina e organizza film, serie TV e musica
+description: >-
+  FileBot dal tuo hub personale. Trova i titoli giusti, rinomina e ordina film,
+  serie TV, anime e musica, e scarica sottotitoli e copertine.
+  Si usa dal browser con la stessa interfaccia della tua installazione Unraid.
+  I file di Umbrel (cartella Home dell'app File) sono in /storage.
+developer: jlesage
+website: https://github.com/jlesage/docker-filebot
+dependencies: []
+repo: https://github.com/jlesage/docker-filebot
+support: https://github.com/jlesage/docker-filebot/issues
+port: 5880
+icon: https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/filebot-icon.png
+gallery: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+releaseNotes: ""
+submitter: Personale
+submission: ""

@@ -1,0 +1,23 @@
+manifestVersion: 1
+id: mio-filebot
+category: files
+name: FileBot
+version: "1.0.0"
+tagline: Rinomina e organizza film, serie TV e musica
+description: >-
+  FileBot dal tuo hub personale. Trova i titoli giusti, rinomina e ordina film,
+  serie TV, anime e musica, e scarica sottotitoli e copertine.
+  Si usa dal browser con la stessa interfaccia della tua installazione Unraid.
+developer: Personale
+website: ""
+dependencies: []
+repo: ""
+support: ""
+port: 5800
+gallery: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+releaseNotes: ""
+submitter: Personale
+submission: ""
