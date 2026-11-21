@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: homelab-filebot_web_1
+      APP_PORT: 5800
+
+  web:
+    image: jlesage/filebot:latest
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      - USER_ID=1000
+      - GROUP_ID=1000
+      - TZ=Europe/Rome
+      - KEEP_APP_RUNNING=1
+    volumes:
+      # Impostazioni e licenza
+      - ${APP_DATA_DIR}/data/config:/config
+      # I file di Umbrel (cartella Home dell'app File): dentro FileBot e' /storage
+      - ${UMBREL_ROOT}/home:/storage
