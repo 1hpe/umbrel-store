@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: homelab-viofosync_web_1
+      APP_PORT: 8080
+
+  web:
+    image: robxyz/viofosync:2.8@sha256:1fe79d16f5564d0ef60788b74b4c36c9065471f9c6573af0f7c9e882c20e98c9
+    restart: on-failure
+    stop_grace_period: 30s
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+      TZ: Europe/Rome
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config
+      - ${UMBREL_ROOT}/home/Dashcam:/recordings
+    # Intel iGPU (UHD 630) for hardware-accelerated exports
+    devices:
+      - /dev/dri:/dev/dri
